@@ -1,4 +1,4 @@
-package com.example.ciencuervos.main;
+package com.example.ciencuervos;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
