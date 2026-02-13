@@ -1,0 +1,52 @@
+{
+  "0": {
+    "question": "Qué valor es más importante?",
+    "answers" : [
+      {"1": [
+        {"text": "respeto"},
+        {"value": 12}
+      ]},
+      {"2": [
+        {"text": "igualdad"},
+        {"value": 40}
+      ]},
+      {"3": [
+        {"text": "equidad"},
+        {"value": 18}
+      ]},
+      {"4": [
+        {"text": "responsabilidad"},
+        {"value": 20}
+      ]},
+      {"5": [
+        {"text": "tolerancia"},
+        {"value": 20}
+      ]}
+    ]
+  },
+  "1": {
+    "question": "Qué valor es menos importante?",
+    "answers" : [
+      {"1": [
+        {"text": "respeto"},
+        {"value": 12}
+      ]},
+      {"2": [
+        {"text": "igualdad"},
+        {"value": 40}
+      ]},
+      {"3": [
+        {"text": "equidad"},
+        {"value": 18}
+      ]},
+      {"4": [
+        {"text": "responsabilidad"},
+        {"value": 20}
+      ]},
+      {"5": [
+        {"text": "tolerancia"},
+        {"value": 20}
+      ]}
+    ]
+  }
+}
