@@ -28,4 +28,11 @@ public class QuestionsService {
 
         return questions.get(id);
     }
+
+    public JsonNode getAllQuestions() {
+        if (questions.isEmpty()) {
+            readAllQuestions();
+        }
+        return questions;
+    }
 }
