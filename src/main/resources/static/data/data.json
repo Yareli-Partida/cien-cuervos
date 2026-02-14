@@ -28,6 +28,456 @@
     "question": "Qué valor es menos importante?",
     "answers" : [
       {"1": [
+        {"text": "no"},
+        {"value": 12}
+      ]},
+      {"2": [
+        {"text": "hay"},
+        {"value": 40}
+      ]},
+      {"3": [
+        {"text": "respuestas"},
+        {"value": 18}
+      ]},
+      {"4": [
+        {"text": "placeholder"},
+        {"value": 20}
+      ]},
+      {"5": [
+        {"text": "ya"},
+        {"value": 20}
+      ]}
+    ]
+  },
+  "2": {
+    "question": "Qué valor es?",
+    "answers" : [
+      {"1": [
+        {"text": "respeto"},
+        {"value": 12}
+      ]},
+      {"2": [
+        {"text": "igualdad"},
+        {"value": 40}
+      ]},
+      {"3": [
+        {"text": "equidad"},
+        {"value": 18}
+      ]},
+      {"4": [
+        {"text": "responsabilidad"},
+        {"value": 20}
+      ]},
+      {"5": [
+        {"text": "tolerancia"},
+        {"value": 20}
+      ]}
+    ]
+  },
+  "3": {
+    "question": "Qué valor podría ser?",
+    "answers" : [
+      {"1": [
+        {"text": "respeto"},
+        {"value": 12}
+      ]},
+      {"2": [
+        {"text": "igualdad"},
+        {"value": 40}
+      ]},
+      {"3": [
+        {"text": "equidad"},
+        {"value": 18}
+      ]},
+      {"4": [
+        {"text": "responsabilidad"},
+        {"value": 20}
+      ]},
+      {"5": [
+        {"text": "tolerancia"},
+        {"value": 20}
+      ]}
+    ]
+  },
+  "4": {
+    "question": "Qué valor podría ser?",
+    "answers" : [
+      {"1": [
+        {"text": "respeto"},
+        {"value": 12}
+      ]},
+      {"2": [
+        {"text": "igualdad"},
+        {"value": 40}
+      ]},
+      {"3": [
+        {"text": "equidad"},
+        {"value": 18}
+      ]},
+      {"4": [
+        {"text": "responsabilidad"},
+        {"value": 20}
+      ]},
+      {"5": [
+        {"text": "tolerancia"},
+        {"value": 20}
+      ]}
+    ]
+  },
+  "5": {
+    "question": "Qué valor podría ser?",
+    "answers" : [
+      {"1": [
+        {"text": "respeto"},
+        {"value": 12}
+      ]},
+      {"2": [
+        {"text": "igualdad"},
+        {"value": 40}
+      ]},
+      {"3": [
+        {"text": "equidad"},
+        {"value": 18}
+      ]},
+      {"4": [
+        {"text": "responsabilidad"},
+        {"value": 20}
+      ]},
+      {"5": [
+        {"text": "tolerancia"},
+        {"value": 20}
+      ]}
+    ]
+  },
+  "6": {
+    "question": "Qué valor podría ser?",
+    "answers" : [
+      {"1": [
+        {"text": "respeto"},
+        {"value": 12}
+      ]},
+      {"2": [
+        {"text": "igualdad"},
+        {"value": 40}
+      ]},
+      {"3": [
+        {"text": "equidad"},
+        {"value": 18}
+      ]},
+      {"4": [
+        {"text": "responsabilidad"},
+        {"value": 20}
+      ]},
+      {"5": [
+        {"text": "tolerancia"},
+        {"value": 20}
+      ]}
+    ]
+  },
+  "7": {
+    "question": "Qué valor podría ser?",
+    "answers" : [
+      {"1": [
+        {"text": "respeto"},
+        {"value": 12}
+      ]},
+      {"2": [
+        {"text": "igualdad"},
+        {"value": 40}
+      ]},
+      {"3": [
+        {"text": "equidad"},
+        {"value": 18}
+      ]},
+      {"4": [
+        {"text": "responsabilidad"},
+        {"value": 20}
+      ]},
+      {"5": [
+        {"text": "tolerancia"},
+        {"value": 20}
+      ]}
+    ]
+  },
+  "8": {
+    "question": "Qué valor podría ser?",
+    "answers" : [
+      {"1": [
+        {"text": "respeto"},
+        {"value": 12}
+      ]},
+      {"2": [
+        {"text": "igualdad"},
+        {"value": 40}
+      ]},
+      {"3": [
+        {"text": "equidad"},
+        {"value": 18}
+      ]},
+      {"4": [
+        {"text": "responsabilidad"},
+        {"value": 20}
+      ]},
+      {"5": [
+        {"text": "tolerancia"},
+        {"value": 20}
+      ]}
+    ]
+  },
+  "9": {
+    "question": "Qué valor podría ser?",
+    "answers" : [
+      {"1": [
+        {"text": "respeto"},
+        {"value": 12}
+      ]},
+      {"2": [
+        {"text": "igualdad"},
+        {"value": 40}
+      ]},
+      {"3": [
+        {"text": "equidad"},
+        {"value": 18}
+      ]},
+      {"4": [
+        {"text": "responsabilidad"},
+        {"value": 20}
+      ]},
+      {"5": [
+        {"text": "tolerancia"},
+        {"value": 20}
+      ]}
+    ]
+  },
+  "10": {
+    "question": "Qué valor podría ser?",
+    "answers" : [
+      {"1": [
+        {"text": "respeto"},
+        {"value": 12}
+      ]},
+      {"2": [
+        {"text": "igualdad"},
+        {"value": 40}
+      ]},
+      {"3": [
+        {"text": "equidad"},
+        {"value": 18}
+      ]},
+      {"4": [
+        {"text": "responsabilidad"},
+        {"value": 20}
+      ]},
+      {"5": [
+        {"text": "tolerancia"},
+        {"value": 20}
+      ]}
+    ]
+  },
+  "11": {
+    "question": "Qué valor podría ser?",
+    "answers" : [
+      {"1": [
+        {"text": "respeto"},
+        {"value": 12}
+      ]},
+      {"2": [
+        {"text": "igualdad"},
+        {"value": 40}
+      ]},
+      {"3": [
+        {"text": "equidad"},
+        {"value": 18}
+      ]},
+      {"4": [
+        {"text": "responsabilidad"},
+        {"value": 20}
+      ]},
+      {"5": [
+        {"text": "tolerancia"},
+        {"value": 20}
+      ]}
+    ]
+  },
+  "12": {
+    "question": "Qué valor podría ser?",
+    "answers" : [
+      {"1": [
+        {"text": "respeto"},
+        {"value": 12}
+      ]},
+      {"2": [
+        {"text": "igualdad"},
+        {"value": 40}
+      ]},
+      {"3": [
+        {"text": "equidad"},
+        {"value": 18}
+      ]},
+      {"4": [
+        {"text": "responsabilidad"},
+        {"value": 20}
+      ]},
+      {"5": [
+        {"text": "tolerancia"},
+        {"value": 20}
+      ]}
+    ]
+  },
+  "13": {
+    "question": "Qué valor podría ser?",
+    "answers" : [
+      {"1": [
+        {"text": "respeto"},
+        {"value": 12}
+      ]},
+      {"2": [
+        {"text": "igualdad"},
+        {"value": 40}
+      ]},
+      {"3": [
+        {"text": "equidad"},
+        {"value": 18}
+      ]},
+      {"4": [
+        {"text": "responsabilidad"},
+        {"value": 20}
+      ]},
+      {"5": [
+        {"text": "tolerancia"},
+        {"value": 20}
+      ]}
+    ]
+  },
+  "14": {
+    "question": "Qué valor podría ser?",
+    "answers" : [
+      {"1": [
+        {"text": "respeto"},
+        {"value": 12}
+      ]},
+      {"2": [
+        {"text": "igualdad"},
+        {"value": 40}
+      ]},
+      {"3": [
+        {"text": "equidad"},
+        {"value": 18}
+      ]},
+      {"4": [
+        {"text": "responsabilidad"},
+        {"value": 20}
+      ]},
+      {"5": [
+        {"text": "tolerancia"},
+        {"value": 20}
+      ]}
+    ]
+  },
+  "15": {
+    "question": "Qué valor podría ser?",
+    "answers" : [
+      {"1": [
+        {"text": "respeto"},
+        {"value": 12}
+      ]},
+      {"2": [
+        {"text": "igualdad"},
+        {"value": 40}
+      ]},
+      {"3": [
+        {"text": "equidad"},
+        {"value": 18}
+      ]},
+      {"4": [
+        {"text": "responsabilidad"},
+        {"value": 20}
+      ]},
+      {"5": [
+        {"text": "tolerancia"},
+        {"value": 20}
+      ]}
+    ]
+  },
+  "16": {
+    "question": "Qué valor podría ser?",
+    "answers" : [
+      {"1": [
+        {"text": "respeto"},
+        {"value": 12}
+      ]},
+      {"2": [
+        {"text": "igualdad"},
+        {"value": 40}
+      ]},
+      {"3": [
+        {"text": "equidad"},
+        {"value": 18}
+      ]},
+      {"4": [
+        {"text": "responsabilidad"},
+        {"value": 20}
+      ]},
+      {"5": [
+        {"text": "tolerancia"},
+        {"value": 20}
+      ]}
+    ]
+  },
+  "17": {
+    "question": "Qué valor podría ser?",
+    "answers" : [
+      {"1": [
+        {"text": "respeto"},
+        {"value": 12}
+      ]},
+      {"2": [
+        {"text": "igualdad"},
+        {"value": 40}
+      ]},
+      {"3": [
+        {"text": "equidad"},
+        {"value": 18}
+      ]},
+      {"4": [
+        {"text": "responsabilidad"},
+        {"value": 20}
+      ]},
+      {"5": [
+        {"text": "tolerancia"},
+        {"value": 20}
+      ]}
+    ]
+  },
+  "18": {
+    "question": "Qué valor podría ser?",
+    "answers" : [
+      {"1": [
+        {"text": "respeto"},
+        {"value": 12}
+      ]},
+      {"2": [
+        {"text": "igualdad"},
+        {"value": 40}
+      ]},
+      {"3": [
+        {"text": "equidad"},
+        {"value": 18}
+      ]},
+      {"4": [
+        {"text": "responsabilidad"},
+        {"value": 20}
+      ]},
+      {"5": [
+        {"text": "tolerancia"},
+        {"value": 20}
+      ]}
+    ]
+  },
+  "19": {
+    "question": "Qué valor podría ser?",
+    "answers" : [
+      {"1": [
         {"text": "respeto"},
         {"value": 12}
       ]},

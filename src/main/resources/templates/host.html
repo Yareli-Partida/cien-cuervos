@@ -3,13 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <title style="display: none">100 Cuervos Dijeron</title>
+    <link rel="stylesheet" href="/css/host.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="main-container">
+        <div id="title-container">
+            <h1>Centro de control</h1>
+        </div>
+        <div id="contents-container">
+            <div id="questions-container">
+                <h3 class="menu-item">Menú</h3>
+                <button id="start-game-1" class="menu-item">Empezar juego #1</button>
+                <button id="start-game-2" class="menu-item">Empezar juego #2</button>
+                <button id="go-home-page" class="menu-item">Volver</button>
+                <div id="show-questions-container">
+                    <p id="title-question"></p>
+                    <p id="current-question"></p>
+                    <div id="show-answers-container">
+                        <p>Respuestas:</p>
+                    </div>
+                    <button id="next-question">Siguiente pregunta</button>
+                    <button id="end-game" style="display: none">Terminar juego</button>
+                    <button id="return-menu">Menú</button>
+                </div>
+            </div>
+            <div id="team-data-container">
+                <div id="team-1">
+                    <p>Equipo #1</p>
+                    <p>Puntos:</p><p id="score-team-1">0</p>
+                </div>
+                <hr>
+                <div id="team-2">
+                    <p>Equipo #2</p>
+                    <p>Puntos:</p><p id="score-team-2">0</p>
+                </div>
+                <hr>
+                <div id="current-round">
+                    <p>Puntos de la ronda:</p><p id="current-round-points">0</p>
+                </div>
+            </div>
+        </div>
 
+        <div id="assignPointsModal" class="modal">
+            <div class="modal-content">
+                <p>Fin de la ronda</p>
+                <p>Puntos acumulados:</p>
+                <p id="modalFinalRoundPoints"></p>
+                <p>Selecciona al equipo ganador de los puntos</p>
+                <button id="modalAssignTeam1">Equipo #1</button>
+                <button id="modalAssignTeam2">Equipo #2</button>
+                <button id="exitModal">Cancelar</button>
+            </div>
+        </div>
+        <div id="winnerModal" class="modal">
+            <div class="modal-content">
+                <p>Juego terminado</p>
+                <p>El equipo ganador es:</p>
+                <p id="winning-team"></p>
+                <button id="winner-return-menu">Menú</button>
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.6.1/sockjs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
     <script src="/js/stompScript.js" type="module"></script>
+    <script src="/js/host.js" type="module"></script>
 </body>
 </html>
