@@ -1,15 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <title style="display: none">100 Cuervos Dijeron</title>
+    <link rel="stylesheet" href="/css/gameroom.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="main-container">
+        <div id="title-container">
+            <div id="team-1-score-container">
+                <div class="card">
+                    <div class="card-info">
+                        <p id="team-1-score" class="score-box">0</p>
+                    </div>
+                </div>
+            </div>
+            <div id="round-points-container">
+                <div class="card">
+                    <div class="card-info">
+                        <p id="round-score" class="score-box">0</p>
+                    </div>
+                </div>
+            </div>
+            <div id="team-2-score-container">
+                <div class="card">
+                    <div class="card-info">
+                        <p id="team-2-score" class="score-box">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="question-box">
+            <p id="current-question"></p>
+        </div>
+        <div id="answers-container">
 
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.6.1/sockjs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
-    <script src="/js/stompScript.js" type="module"></script>
+    <script src="/js/stompScriptGameRoom.js" type="module"></script>
 </body>
 </html>

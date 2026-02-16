@@ -1,6 +1,5 @@
-let sentButton = document.getElementById("send");
-let id = 1; // fix this later
 let stompClient = null;
+let id = 1;
 window.onload = connect();
 
 function connect() {
@@ -19,3 +18,5 @@ function sendMessage(message) {
 		JSON.stringify({'message': message}
 		));
 }
+
+export {sendMessage}
