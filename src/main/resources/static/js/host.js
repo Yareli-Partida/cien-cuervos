@@ -6,8 +6,9 @@ let startGame2Button = document.getElementById("start-game-2");
 let goBackToHomePageButton = document.getElementById("go-home-page");
 let returnToMenuButton = document.getElementById("return-menu");
 let nextQuestion = document.getElementById("next-question");
-let endGameButton = document.getElementById("end-game");
 let winnersReturnToMenuButton = document.getElementById("winner-return-menu");
+let addStrikeButton = document.getElementById("add-strike");
+let strikeCounter = 0;
 let currentQuestionIndex = 0;
 
 window.onload = getQuestions();
@@ -124,7 +125,6 @@ startGame1Button.addEventListener("click", e => {
 	currentQuestionIndex = 0;
 	updateQuestionData()
 	nextQuestion.style.display = "block";
-	document.getElementById("end-game").style.display = "none"
 
 	createAnswersElements();
 
@@ -137,7 +137,6 @@ startGame2Button.addEventListener("click", e => {
 	currentQuestionIndex = 10;
 	updateQuestionData();
 	nextQuestion.style.display = "block";
-	document.getElementById("end-game").style.display = "none"
 
 	createAnswersElements();
 
@@ -171,33 +170,24 @@ nextQuestion.addEventListener("click", async e => {
 		finalRoundPoints.innerText = "0";
 
 		if (currentQuestionIndex === 9 || currentQuestionIndex === 19) {
-			nextQuestion.style.display = "none";
-			document.getElementById("end-game").style.display = "block";
+			nextQuestion.innerText = "Terminar juego";
 		}
 
 		sendMessage({"questionIdx": currentQuestionIndex})
 	}
 });
 
-endGameButton.addEventListener("click", e => {
-	let finalTeam1Score = parseInt(document.getElementById("score-team-1").innerText);
-	let finalTeam2Score = parseInt(document.getElementById("score-team-2").innerText);
-	let winningTeamP = document.getElementById("winning-team");
-
-	console.log("1 team score " + finalTeam1Score)
-	console.log("2 team score " + finalTeam2Score)
-
-	console.log("is 1 larger than 2 " + finalTeam1Score > finalTeam2Score)
-
-	winnersModal.style.display = "block";
-
-	if (finalTeam1Score > finalTeam2Score) {
-		winningTeamP.innerText = "¡Equipo #1!";
-		sendMessage({"gameOver": "team-1"});
-	} else {
-		winningTeamP.innerText = "¡Equipo #2!";
-		sendMessage({"gameOver": "team-2"});
+addStrikeButton.addEventListener("click", e => {
+	if (strikeCounter < 3) {
+		document.getElementById("current-strikes").innerText += "X";
+		strikeCounter++;
 	}
+
+	if (strikeCounter === 3) {
+		window.alert("¡3 Strikes!")
+	}
+
+	sendMessage({"strike": strikeCounter.toString()});
 });
 
 winnersReturnToMenuButton.addEventListener("click", e => {
@@ -207,6 +197,7 @@ winnersReturnToMenuButton.addEventListener("click", e => {
 	document.getElementById("score-team-1").innerText = "0";
 	document.getElementById("score-team-2").innerText = "0";
 	document.getElementById("current-round-points").innerText = "0";
+	document.getElementById("next-question").innerText = "Siguiente pregunta"
 	removeAnswers();
 	showMenuItems();
 });
@@ -225,11 +216,31 @@ async function showModalAsync() {
 			let score = parseInt(scoreTeam1Element.innerText.toString())
 			let totalRoundScore = parseInt(document.getElementById("current-round-points").innerText.toString())
 			scoreTeam1Element.innerText = String(score+totalRoundScore);
+			document.getElementById("current-strikes").innerText = "";
+			strikeCounter = 0;
 			modal.style.display = "none"
 			team1Button.removeEventListener("click", onClickTeam1)
 			team2Button.removeEventListener("click", onClickTeam2);
 			exitModalButton.removeEventListener("click", onExitModal);
 			sendMessage({"team1Points": String(score+totalRoundScore)});
+
+			if (currentQuestionIndex === 9 || currentQuestionIndex === 19) {
+				let finalTeam1Score = parseInt(document.getElementById("score-team-1").innerText);
+				let finalTeam2Score = parseInt(document.getElementById("score-team-2").innerText);
+				let winningTeamP = document.getElementById("winning-team");
+
+				modal.style.display = "none"
+				winnersModal.style.display = "block";
+
+				if (finalTeam1Score > finalTeam2Score) {
+					winningTeamP.innerText = "¡Equipo #1!";
+					sendMessage({"gameOver": "team-1"});
+				} else {
+					winningTeamP.innerText = "¡Equipo #2!";
+					sendMessage({"gameOver": "team-2"});
+				}
+			}
+
 			resolve(null)
 		}
 
@@ -238,11 +249,30 @@ async function showModalAsync() {
 			let score = parseInt(scoreTeam2Element.innerText.toString())
 			let totalRoundScore = parseInt(document.getElementById("current-round-points").innerText.toString())
 			scoreTeam2Element.innerText = String(score+totalRoundScore);
+			document.getElementById("current-strikes").innerText = "";
+			strikeCounter = 0;
 			modal.style.display = "none";
 			team1Button.removeEventListener("click", onClickTeam1)
 			team2Button.removeEventListener("click", onClickTeam2);
-			endGameButton.removeEventListener("click", onExitModal);
 			sendMessage({"team2Points": String(score+totalRoundScore)});
+
+			if (currentQuestionIndex === 9 || currentQuestionIndex === 19) {
+				let finalTeam1Score = parseInt(document.getElementById("score-team-1").innerText);
+				let finalTeam2Score = parseInt(document.getElementById("score-team-2").innerText);
+				let winningTeamP = document.getElementById("winning-team");
+
+				modal.style.display = "none"
+				winnersModal.style.display = "block";
+
+				if (finalTeam1Score > finalTeam2Score) {
+					winningTeamP.innerText = "¡Equipo #1!";
+					sendMessage({"gameOver": "team-1"});
+				} else {
+					winningTeamP.innerText = "¡Equipo #2!";
+					sendMessage({"gameOver": "team-2"});
+				}
+			}
+
 			resolve(null);
 		}
 

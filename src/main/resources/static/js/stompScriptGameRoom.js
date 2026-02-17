@@ -1,4 +1,4 @@
-import {setTeam2Score, setTeam1Score, setRoundScore, showCurrentQuestion, flipAnswer, showWinner, clearScreen} from "./gameroom.js";
+import {setTeam2Score, setTeam1Score, setRoundScore, showCurrentQuestion, flipAnswer, showWinner, showStrikeModal} from "./gameroom.js";
 
 
 let id = 1; // fix this later
@@ -32,6 +32,8 @@ function connect() {
 					}
 				} else if (body.message.hasOwnProperty("gameOver")) {
 					showWinner(body.message.gameOver);
+				} else if (body.message.hasOwnProperty("strike")) {
+					showStrikeModal(parseInt(body.message.strike));
 				}
 			}
 		});

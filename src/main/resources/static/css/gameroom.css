@@ -3,61 +3,133 @@ body {
     color: white;
     font-family: "Quantico", sans-serif;
 
-    background-color: #121212; /* Dark background color */
-    background-image: radial-gradient(
-            circle at 50% 50%,
-            rgba(255, 255, 255, 0.05) 1px,
-            transparent 0
+    /*background-color: #121212; !* Dark background color *!*/
+    /*background-image: radial-gradient(*/
+    /*        circle at 50% 50%,*/
+    /*        rgba(255, 255, 255, 0.05) 1px,*/
+    /*        transparent 0*/
+    /*),*/
+    /*linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0),*/
+    /*linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 0);*/
+    /*background-size:*/
+    /*        40px 40px,*/
+    /*        20px 20px,*/
+    /*        20px 20px;*/
+    /*position: relative;*/
+    /*overflow: hidden;*/
+}
+
+/*.container::before {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background: repeating-linear-gradient(*/
+/*            45deg,*/
+/*            transparent,*/
+/*            transparent 10px,*/
+/*            rgba(255, 255, 255, 0.03) 10px,*/
+/*            rgba(255, 255, 255, 0.03) 20px*/
+/*    );*/
+/*    z-index: 1;*/
+/*    opacity: 0.8;*/
+/*}*/
+
+/*.container::after {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background: radial-gradient(*/
+/*            circle,*/
+/*            rgba(255, 255, 255, 0.07) 1px,*/
+/*            transparent 1px*/
+/*    );*/
+/*    background-size: 60px 60px;*/
+/*    z-index: 2;*/
+/*    opacity: 0.6;*/
+/*}*/
+
+/* From Uiverse.io by themrsami */
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #0f172a;
+    background-image: linear-gradient(
+            45deg,
+            rgba(59, 130, 246, 0.08) 25%,
+            transparent 25%,
+            transparent 75%,
+            rgba(59, 130, 246, 0.08) 75%
     ),
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 0);
+    linear-gradient(
+            -45deg,
+            rgba(59, 130, 246, 0.08) 25%,
+            transparent 25%,
+            transparent 75%,
+            rgba(59, 130, 246, 0.08) 75%
+    ),
+    linear-gradient(
+            45deg,
+            transparent 40%,
+            rgba(99, 102, 241, 0.1) 40%,
+            rgba(99, 102, 241, 0.1) 60%,
+            transparent 60%
+    ),
+    linear-gradient(
+            -45deg,
+            transparent 40%,
+            rgba(99, 102, 241, 0.1) 40%,
+            rgba(99, 102, 241, 0.1) 60%,
+            transparent 60%
+    ),
+    radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
     background-size:
-            40px 40px,
-            20px 20px,
-            20px 20px;
+            60px 60px,
+            60px 60px,
+            120px 120px,
+            120px 120px,
+            100% 100%;
+    background-position:
+            0 0,
+            30px 30px,
+            0 0,
+            60px 60px,
+            0 0;
     position: relative;
-    overflow: hidden;
 }
 
 .container::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background: repeating-linear-gradient(
             45deg,
-            transparent,
-            transparent 10px,
-            rgba(255, 255, 255, 0.03) 10px,
-            rgba(255, 255, 255, 0.03) 20px
+            rgba(255, 255, 255, 0.03) 0px,
+            rgba(255, 255, 255, 0.03) 1px,
+            transparent 1px,
+            transparent 10px
+    ),
+    repeating-linear-gradient(
+            -45deg,
+            rgba(255, 255, 255, 0.03) 0px,
+            rgba(255, 255, 255, 0.03) 1px,
+            transparent 1px,
+            transparent 10px
     );
-    z-index: 1;
-    opacity: 0.8;
+    background-size: 20px 20px;
+    filter: blur(0.5px);
 }
 
-.container::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(
-            circle,
-            rgba(255, 255, 255, 0.07) 1px,
-            transparent 1px
-    );
-    background-size: 60px 60px;
-    z-index: 2;
-    opacity: 0.6;
-}
 
 #main-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /*justify-content: center;*/
     gap: 5vh;
     height: 100%;
 }
@@ -80,7 +152,7 @@ body {
     --color: #292b2c;
     width: 14vw;
     height: 10vh;
-    background: transparent;
+    background-color: #292b2c;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,6 +173,7 @@ body {
     margin: 0 1vw 3vh 1vw;
     border-radius: 1rem;
     box-shadow: 0 0 0.5vw 0.25vw white;
+    background-color: #292b2c;
 }
 
 .answer > * {
@@ -120,6 +193,7 @@ body {
     box-shadow: 0 0 0.5vw 0.25vw white;
     height: 10vh;
     align-self: center;
+    background-color: #292b2c;
 }
 
 #current-question {
@@ -132,4 +206,29 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    text-align: center;
+    vertical-align: center;
+}
+
+.modal-content {
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+#current-strikes {
+    font-weight: bolder;
+    font-size: 30vw;
+    color: darkred;
 }

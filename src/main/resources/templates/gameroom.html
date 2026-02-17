@@ -8,7 +8,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="container">
+<audio id="error-sound" src="/assets/sounds/error_sound.wav"></audio>
+<audio id="popup-sound" src="/assets/sounds/popup_sound.wav"></audio>
+<audio id="found-sound" src="/assets/sounds/found_answer_sound.wav"></audio>
+<audio id="winner-sound" src="/assets/sounds/winner_sound.wav"></audio>
     <div id="main-container">
         <div id="title-container">
             <div id="team-1-score-container">
@@ -36,8 +40,11 @@
         <div id="question-box">
             <p id="current-question"></p>
         </div>
-        <div id="answers-container">
-
+        <div id="answers-container"></div>
+        <div id="strikes-modal" class="modal">
+            <div class="modal-content">
+                <p id="current-strikes"></p>
+            </div>
         </div>
     </div>
 

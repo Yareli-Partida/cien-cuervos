@@ -1,4 +1,9 @@
 let questions = {};
+let strikesModal = document.getElementById("strikes-modal");
+let errorSound = document.getElementById("error-sound");
+let popUpSound = document.getElementById("popup-sound");
+let foundAnswerSound = document.getElementById("found-sound");
+let winnerSound = document.getElementById("winner-sound");
 let currentQuestionIdx;
 
 window.onload = getQuestions();
@@ -46,6 +51,7 @@ function showCurrentQuestion(idx) {
 	let questionTitle = document.getElementById("current-question");
 	questionTitle.innerText = questions[idx]["question"];
 	createAnswerElements(questions[idx]["answers"]);
+	popUpSound.play();
 }
 
 function createAnswerElements(answers) {
@@ -82,6 +88,7 @@ function flipAnswer(idx) {
 		answerElement.style.display = "block";
 		scoreElement.style.display = "block";
 		answerElement.setAttribute("class", "visible");
+		foundAnswerSound.play();
 	}
 }
 
@@ -98,7 +105,11 @@ function setTeam2Score(score) {
 }
 
 function showWinner(winner) {
-	clearScreen();
+	let allCurrentAnswers = document.getElementsByClassName("answer");
+
+	while (allCurrentAnswers.length > 0) {
+		allCurrentAnswers[0].remove();
+	}
 
 	let div = document.getElementById("answers-container");
 	let pElement = document.createElement("p");
@@ -113,6 +124,25 @@ function showWinner(winner) {
 	let questionTitle = document.getElementById("current-question");
 	questionTitle.innerText = "Fin del juego";
 	div.appendChild(pElement)
+	winnerSound.play();
 }
 
-export {setTeam1Score, setRoundScore, setTeam2Score, showCurrentQuestion, flipAnswer, showWinner, clearScreen}
+function sleep(ms) {
+	return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function showStrikeModal(amount) {
+	for (let i = 0; i < amount; i++) {
+		document.getElementById("current-strikes").innerText += "X"
+	}
+
+	errorSound.play();
+	strikesModal.style.display = "block";
+
+	sleep(2000).then(() => {
+		strikesModal.style.display = "block";
+		document.getElementById("current-strikes").innerText = "";
+	});
+}
+
+export {setTeam1Score, setRoundScore, setTeam2Score, showCurrentQuestion, flipAnswer, showWinner, clearScreen, showStrikeModal}
