@@ -25,19 +25,18 @@ async function getQuestions() {
 	}
 }
 
-function clearScreen() {
-	let allCurrentAnswers = document.getElementsByClassName("answer");
+async function clearScreen() {
+	return new Promise((resolve) => {
+		let allCurrentAnswers = document.getElementsByClassName("answer");
 
-	while (allCurrentAnswers.length > 0) {
-		allCurrentAnswers[0].remove();
-	}
+		while (allCurrentAnswers.length > 0) {
+			allCurrentAnswers[0].remove();
+		}
 
-	document.getElementById("team-1-score").innerText = "0";
-	document.getElementById("team-2-score").innerText = "0";
-	document.getElementById("round-score").innerText = "0";
-
-	let questionTitle = document.getElementById("current-question");
-	questionTitle.innerText = "";
+		let questionTitle = document.getElementById("current-question");
+		questionTitle.innerText = "";
+		resolve(null);
+	})
 }
 
 function showCurrentQuestion(idx) {
@@ -104,12 +103,8 @@ function setTeam2Score(score) {
 	document.getElementById("team-2-score").innerText = String (score);
 }
 
-function showWinner(winner) {
-	let allCurrentAnswers = document.getElementsByClassName("answer");
-
-	while (allCurrentAnswers.length > 0) {
-		allCurrentAnswers[0].remove();
-	}
+async function showWinner(winner) {
+	await clearScreen();
 
 	let div = document.getElementById("answers-container");
 	let pElement = document.createElement("p");
@@ -117,8 +112,10 @@ function showWinner(winner) {
 
 	if (winner === "team-1") {
 		pElement.innerText = "Ganador: ¡Equipo 1!"
-	} else {
+	} else if (winner === "team-2") {
 		pElement.innerText = "Ganador: ¡Equipo 2!"
+	} else {
+		pElement.innerText = "¡Empate!"
 	}
 
 	let questionTitle = document.getElementById("current-question");

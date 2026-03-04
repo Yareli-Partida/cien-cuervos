@@ -45,10 +45,10 @@ function showMenuItems() {
 }
 
 function updateQuestionData() {
-	if (currentQuestionIndex < 10) {
+	if (currentQuestionIndex < 5) {
 		document.getElementById("title-question").innerText = "Pregunta #" + String(currentQuestionIndex + 1) + ":";
 	} else {
-		document.getElementById("title-question").innerText = "Pregunta #" + String(currentQuestionIndex - 9) + ":";
+		document.getElementById("title-question").innerText = "Pregunta #" + String(currentQuestionIndex - 4) + ":";
 	}
 	document.getElementById("current-question").innerText = questions[currentQuestionIndex]["question"];
 }
@@ -62,7 +62,7 @@ function createAnswersElements() {
 		let pElement = document.createElement("p");
 		pElement.style.flexGrow = 1;
 		pElement.style.color = "red";
-		pElement.setAttribute("id", "answer-" + String(i))
+		pElement.setAttribute("id", "answer-" + String(i));
 		let pElement2 = document.createElement("p");
 		pElement2.style.flexGrow = 1;
 		pElement2.setAttribute("class", "score-p")
@@ -71,18 +71,34 @@ function createAnswersElements() {
 		pElement.innerText = answersArray[i][i+1][0]["text"];
 		pElement2.innerText = answersArray[i][i+1][1]["value"];
 
-		let labelId = "check-button-" + i
+		let labelId = "check-button-" + i;
+		let revealButtonId = "reveal-button-" + i;
 
-		newDiv.appendChild(pElement)
-		newDiv.appendChild(pElement2)
-		newDiv.innerHTML += '<!-- From Uiverse.io by SelfMadeSystem --> \n' +
+		newDiv.appendChild(pElement);
+		newDiv.appendChild(pElement2);
+		newDiv.innerHTML +=
+			'<!-- From Uiverse.io by SelfMadeSystem --> \n' +
 			'<label class="container" id=${labelId}>\n' +
 			`  <input type="checkbox" id=${labelId}>\n\n` +
 			'  <svg viewBox="0 0 64 64" height="1rem" width="1.5rem" fill="black">\n' +
 			'    <path d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" pathLength="575.0541381835938" class="path"></path>\n' +
 			'  </svg>\n' +
 			'</label>'
+
 		answersDiv.appendChild(newDiv);
+
+		let revealButton = document.createElement("button");
+		revealButton.style.border = "none";
+		revealButton.style.backgroundColor = "transparent";
+
+		revealButton.setAttribute("id", revealButtonId);
+
+		revealButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash-fill" viewBox="0 0 16 16">' +
+			'<path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7 7 0 0 0 2.79-.588M5.21 3.088A7 7 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474z"/>' +
+			'<path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12z"/>' +
+			'</svg>';
+
+		newDiv.appendChild(revealButton);
 
 		document.getElementById("check-button-"+i).addEventListener("click", e => {
 			let answerText = document.getElementById("answer-" + i);
@@ -96,6 +112,15 @@ function createAnswersElements() {
 
 				totalRoundPointsElements.innerText = String(score+currentScore);
 
+				let button = document.getElementById("reveal-button-" + i);
+
+				button.setAttribute("class", "revealed")
+				button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"' +
+					'className="bi bi-eye-fill" viewBox="0 0 16 16">' +
+					'<path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>' +
+					'<path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>' +
+					'</svg>'
+
 				sendMessage({"flipAnswerCard": i});
 				sendMessage({"roundPoints": totalRoundPointsElements.innerText});
 			} else {
@@ -107,7 +132,32 @@ function createAnswersElements() {
 				sendMessage({"flipAnswerCard": i});
 				sendMessage({"roundPoints": totalRoundPointsElements.innerText});
 			}
-		})
+		});
+
+		document.getElementById("reveal-button-" + i).addEventListener("click", e => {
+			let button = document.getElementById("reveal-button-" + i);
+
+			if (button.getAttribute("class") === null) {
+				button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"' +
+					'className="bi bi-eye-fill" viewBox="0 0 16 16">' +
+					'<path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>' +
+					'<path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>' +
+					'</svg>'
+
+				button.setAttribute("class", "revealed")
+
+				sendMessage({"flipAnswerCard": i});
+
+			} else {
+				button.removeAttribute("class");
+				button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-slash-fill" viewBox="0 0 16 16">' +
+					'<path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7 7 0 0 0 2.79-.588M5.21 3.088A7 7 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474z"/>' +
+					'<path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12z"/>' +
+					'</svg>'
+
+				sendMessage({"flipAnswerCard": i});
+			}
+		});
 	}
 }
 
@@ -134,7 +184,7 @@ startGame1Button.addEventListener("click", e => {
 startGame2Button.addEventListener("click", e => {
 	hideMenuItems();
 	document.getElementById("show-questions-container").style.display = "flex";
-	currentQuestionIndex = 10;
+	currentQuestionIndex = 5;
 	updateQuestionData();
 	nextQuestion.style.display = "block";
 
@@ -169,7 +219,7 @@ nextQuestion.addEventListener("click", async e => {
 		createAnswersElements();
 		finalRoundPoints.innerText = "0";
 
-		if (currentQuestionIndex === 9 || currentQuestionIndex === 19) {
+		if (currentQuestionIndex === 4 || currentQuestionIndex === 9) {
 			nextQuestion.innerText = "Terminar juego";
 		}
 
@@ -224,7 +274,7 @@ async function showModalAsync() {
 			exitModalButton.removeEventListener("click", onExitModal);
 			sendMessage({"team1Points": String(score+totalRoundScore)});
 
-			if (currentQuestionIndex === 9 || currentQuestionIndex === 19) {
+			if (currentQuestionIndex === 4 || currentQuestionIndex === 9) {
 				let finalTeam1Score = parseInt(document.getElementById("score-team-1").innerText);
 				let finalTeam2Score = parseInt(document.getElementById("score-team-2").innerText);
 				let winningTeamP = document.getElementById("winning-team");
@@ -235,13 +285,18 @@ async function showModalAsync() {
 				if (finalTeam1Score > finalTeam2Score) {
 					winningTeamP.innerText = "¡Equipo #1!";
 					sendMessage({"gameOver": "team-1"});
+				} else if (finalTeam1Score === finalTeam2Score) {
+					winningTeamP.innerText = "¡Empate!";
+					sendMessage({"gameOver": "tie"});
 				} else {
 					winningTeamP.innerText = "¡Equipo #2!";
 					sendMessage({"gameOver": "team-2"});
 				}
-			}
 
-			resolve(null)
+				resolve("gameOver");
+			} else {
+				resolve(null);
+			}
 		}
 
 		function onClickTeam2() {
@@ -256,7 +311,7 @@ async function showModalAsync() {
 			team2Button.removeEventListener("click", onClickTeam2);
 			sendMessage({"team2Points": String(score+totalRoundScore)});
 
-			if (currentQuestionIndex === 9 || currentQuestionIndex === 19) {
+			if (currentQuestionIndex === 4 || currentQuestionIndex === 9) {
 				let finalTeam1Score = parseInt(document.getElementById("score-team-1").innerText);
 				let finalTeam2Score = parseInt(document.getElementById("score-team-2").innerText);
 				let winningTeamP = document.getElementById("winning-team");
@@ -267,13 +322,17 @@ async function showModalAsync() {
 				if (finalTeam1Score > finalTeam2Score) {
 					winningTeamP.innerText = "¡Equipo #1!";
 					sendMessage({"gameOver": "team-1"});
+				} else if (finalTeam1Score === finalTeam2Score) {
+					winningTeamP.innerText = "¡Empate!";
+					sendMessage({"gameOver": "tie"});
 				} else {
 					winningTeamP.innerText = "¡Equipo #2!";
 					sendMessage({"gameOver": "team-2"});
 				}
+				resolve("gameOver");
+			} else {
+				resolve(null);
 			}
-
-			resolve(null);
 		}
 
 		function onExitModal() {

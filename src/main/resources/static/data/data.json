@@ -1,501 +1,251 @@
 {
   "0": {
-    "question": "Qué valor es más importante?",
+    "question": "Se hace cuando un compañero no entiende un tema",
     "answers" : [
       {"1": [
-        {"text": "respeto"},
-        {"value": 12}
+        {"text": "Ayudarlo/ Explicarle/ Retroalimentación"},
+        {"value": 41}
       ]},
       {"2": [
-        {"text": "igualdad"},
-        {"value": 40}
-      ]},
-      {"3": [
-        {"text": "equidad"},
+        {"text": "Alentarlo a que pregunte"},
         {"value": 18}
       ]},
+      {"3": [
+        {"text": "Repasar en clase"},
+        {"value": 15}
+      ]},
       {"4": [
-        {"text": "responsabilidad"},
-        {"value": 20}
+        {"text": "Sugerirle asesoría"},
+        {"value": 13}
       ]},
       {"5": [
-        {"text": "tolerancia"},
-        {"value": 20}
+        {"text": "Ignorarlo/ Continuar la clase"},
+        {"value": 13}
       ]}
     ]
   },
   "1": {
-    "question": "Qué valor es menos importante?",
+    "question": "Menciona una cualidad de un buen líder",
     "answers" : [
       {"1": [
-        {"text": "no"},
-        {"value": 12}
+        {"text": "Responsabilidad/ Organización"},
+        {"value": 34}
       ]},
       {"2": [
-        {"text": "hay"},
-        {"value": 40}
+        {"text": "Buena comunicación/ Capacidad de escuchar"},
+        {"value": 23}
       ]},
       {"3": [
-        {"text": "respuestas"},
+        {"text": "Buen criterio/ Toma de decisiones/ Inteligencia"},
         {"value": 18}
       ]},
       {"4": [
-        {"text": "placeholder"},
-        {"value": 20}
+        {"text": "Liderazgo/ Capacidad de inspirar"},
+        {"value": 18}
       ]},
       {"5": [
-        {"text": "ya"},
-        {"value": 20}
+        {"text": "Tener valores"},
+        {"value": 7}
       ]}
     ]
   },
   "2": {
-    "question": "Qué valor es?",
+    "question": "Menciona un rasgo por el que se discrimina a una persona",
     "answers" : [
       {"1": [
-        {"text": "respeto"},
-        {"value": 12}
+        {"text": "Color de piel/ Apariencia física"},
+        {"value": 41}
       ]},
       {"2": [
-        {"text": "igualdad"},
-        {"value": 40}
+        {"text": "Orientación sexual/ Género"},
+        {"value": 20}
       ]},
       {"3": [
-        {"text": "equidad"},
-        {"value": 18}
+        {"text": "Creencias/ Gustos"},
+        {"value": 16}
       ]},
       {"4": [
-        {"text": "responsabilidad"},
-        {"value": 20}
+        {"text": "Nacionalidad/ Etnia"},
+        {"value": 15}
       ]},
       {"5": [
-        {"text": "tolerancia"},
-        {"value": 20}
+        {"text": "Nivel educativo/ aprendizaje"},
+        {"value": 8}
       ]}
     ]
   },
   "3": {
-    "question": "Qué valor podría ser?",
+    "question": "Di una forma de solucionar un desacuerdo dentro de un equipo",
     "answers" : [
       {"1": [
-        {"text": "respeto"},
-        {"value": 12}
+        {"text": "Hacer una votación/ Buscar un concenso"},
+        {"value": 37}
       ]},
       {"2": [
-        {"text": "igualdad"},
-        {"value": 40}
+        {"text": "Dialogar/ Hablar entre el equipo"},
+        {"value": 32}
       ]},
       {"3": [
-        {"text": "equidad"},
-        {"value": 18}
+        {"text": "Debatir/ Analizar pros y contras"},
+        {"value": 16}
       ]},
       {"4": [
-        {"text": "responsabilidad"},
-        {"value": 20}
+        {"text": "Dejar que el líder decida"},
+        {"value": 10}
       ]},
       {"5": [
-        {"text": "tolerancia"},
-        {"value": 20}
+        {"text": "Pedir mediación a un tercero"},
+        {"value": 5}
       ]}
     ]
   },
   "4": {
-    "question": "Qué valor podría ser?",
+    "question": "Algo que distrae a un alumno durante clase",
     "answers" : [
       {"1": [
-        {"text": "respeto"},
-        {"value": 12}
+        {"text": "El celular/ Redes sociales/ Videojuegos"},
+        {"value": 45}
       ]},
       {"2": [
-        {"text": "igualdad"},
-        {"value": 40}
+        {"text": "Falta de sueño/ Hambre"},
+        {"value": 23}
       ]},
       {"3": [
-        {"text": "equidad"},
-        {"value": 18}
+        {"text": "El ruido"},
+        {"value": 16}
       ]},
       {"4": [
-        {"text": "responsabilidad"},
-        {"value": 20}
+        {"text": "Otras personas/ Hablar en clase"},
+        {"value": 12}
       ]},
       {"5": [
-        {"text": "tolerancia"},
-        {"value": 20}
+        {"text": "Método de enseñanza"},
+        {"value": 4}
       ]}
     ]
   },
   "5": {
-    "question": "Qué valor podría ser?",
+    "question": "Menciona una pequeña acción que mejora el ambiente del salón",
     "answers" : [
       {"1": [
-        {"text": "respeto"},
-        {"value": 12}
+        {"text": "Plática entre compañeros/ Colaboración"},
+        {"value": 27}
       ]},
       {"2": [
-        {"text": "igualdad"},
-        {"value": 40}
+        {"text": "Compañerismo/ Buena actitud"},
+        {"value": 24}
       ]},
       {"3": [
-        {"text": "equidad"},
-        {"value": 18}
+        {"text": "Respeto/ Ser amable"},
+        {"value": 22}
       ]},
       {"4": [
-        {"text": "responsabilidad"},
-        {"value": 20}
+        {"text": "Cuidado del salón/ Limpieza/ Higiene"},
+        {"value": 19}
       ]},
       {"5": [
-        {"text": "tolerancia"},
-        {"value": 20}
+        {"text": "Guardar silencio/ Disciplina"},
+        {"value": 8}
       ]}
     ]
   },
   "6": {
-    "question": "Qué valor podría ser?",
+    "question": "Algo que hace un jefe que un líder no",
     "answers" : [
       {"1": [
-        {"text": "respeto"},
-        {"value": 12}
+        {"text": "Da órdenes sin escuchar/ Controla en exceso/ Hace todo solo"},
+        {"value": 56}
       ]},
       {"2": [
-        {"text": "igualdad"},
-        {"value": 40}
+        {"text": "Impone autoridad"},
+        {"value": 22}
       ]},
       {"3": [
-        {"text": "equidad"},
-        {"value": 18}
+        {"text": "Humillar"},
+        {"value": 12}
       ]},
       {"4": [
-        {"text": "responsabilidad"},
-        {"value": 20}
+        {"text": "No ayudar"},
+        {"value": 7}
       ]},
       {"5": [
-        {"text": "tolerancia"},
-        {"value": 20}
+        {"text": "Organizar/ Tomar decisiones"},
+        {"value": 3}
       ]}
     ]
   },
   "7": {
-    "question": "Qué valor podría ser?",
+    "question": "Algo que no se debe hacer en un examen",
     "answers" : [
       {"1": [
-        {"text": "respeto"},
-        {"value": 12}
+        {"text": "Copiar/ Hacer trampa/ Pasar respuestas"},
+        {"value": 51}
       ]},
       {"2": [
-        {"text": "igualdad"},
-        {"value": 40}
+        {"text": "Usar el celular u otras herramientas externas"},
+        {"value": 21}
       ]},
       {"3": [
-        {"text": "equidad"},
-        {"value": 18}
+        {"text": "Llevar acordeon"},
+        {"value": 13}
       ]},
       {"4": [
-        {"text": "responsabilidad"},
-        {"value": 20}
+        {"text": "Llegar tarde"},
+        {"value": 8}
       ]},
       {"5": [
-        {"text": "tolerancia"},
-        {"value": 20}
+        {"text": "Hacer ruido"},
+        {"value": 7}
       ]}
     ]
   },
   "8": {
-    "question": "Qué valor podría ser?",
+    "question": "Algo que nunca debes hacer cuando alguien opina diferente",
     "answers" : [
       {"1": [
-        {"text": "respeto"},
-        {"value": 12}
+        {"text": "Burlarse/ Ridiculizar"},
+        {"value": 30}
       ]},
       {"2": [
-        {"text": "igualdad"},
-        {"value": 40}
+        {"text": "Ignorarlo/ Descalificar/ Minimizar"},
+        {"value": 24}
       ]},
       {"3": [
-        {"text": "equidad"},
-        {"value": 18}
+        {"text": "Juzgarlo / Criticarlo"},
+        {"value": 21}
       ]},
       {"4": [
-        {"text": "responsabilidad"},
-        {"value": 20}
+        {"text": "Insultar/ Gritarle/ Agredir"},
+        {"value": 19}
       ]},
       {"5": [
-        {"text": "tolerancia"},
-        {"value": 20}
+        {"text": "Imponer tu opinión"},
+        {"value": 10}
       ]}
     ]
   },
   "9": {
-    "question": "Qué valor podría ser?",
+    "question": "¿Qué valor debería practicarse más en el campus?",
     "answers" : [
       {"1": [
-        {"text": "respeto"},
-        {"value": 12}
+        {"text": "Solidaridad/ Compañerismo/ Bien común"},
+        {"value": 37}
       ]},
       {"2": [
-        {"text": "igualdad"},
-        {"value": 40}
+        {"text": "Respeto/ Tolerancia"},
+        {"value": 33}
       ]},
       {"3": [
-        {"text": "equidad"},
-        {"value": 18}
+        {"text": "Responsabilidad/ Disciplina"},
+        {"value": 16}
       ]},
       {"4": [
-        {"text": "responsabilidad"},
-        {"value": 20}
+        {"text": "Empatía"},
+        {"value": 11}
       ]},
       {"5": [
-        {"text": "tolerancia"},
-        {"value": 20}
-      ]}
-    ]
-  },
-  "10": {
-    "question": "Qué valor podría ser?",
-    "answers" : [
-      {"1": [
-        {"text": "respeto"},
-        {"value": 12}
-      ]},
-      {"2": [
-        {"text": "igualdad"},
-        {"value": 40}
-      ]},
-      {"3": [
-        {"text": "equidad"},
-        {"value": 18}
-      ]},
-      {"4": [
-        {"text": "responsabilidad"},
-        {"value": 20}
-      ]},
-      {"5": [
-        {"text": "tolerancia"},
-        {"value": 20}
-      ]}
-    ]
-  },
-  "11": {
-    "question": "Qué valor podría ser?",
-    "answers" : [
-      {"1": [
-        {"text": "respeto"},
-        {"value": 12}
-      ]},
-      {"2": [
-        {"text": "igualdad"},
-        {"value": 40}
-      ]},
-      {"3": [
-        {"text": "equidad"},
-        {"value": 18}
-      ]},
-      {"4": [
-        {"text": "responsabilidad"},
-        {"value": 20}
-      ]},
-      {"5": [
-        {"text": "tolerancia"},
-        {"value": 20}
-      ]}
-    ]
-  },
-  "12": {
-    "question": "Qué valor podría ser?",
-    "answers" : [
-      {"1": [
-        {"text": "respeto"},
-        {"value": 12}
-      ]},
-      {"2": [
-        {"text": "igualdad"},
-        {"value": 40}
-      ]},
-      {"3": [
-        {"text": "equidad"},
-        {"value": 18}
-      ]},
-      {"4": [
-        {"text": "responsabilidad"},
-        {"value": 20}
-      ]},
-      {"5": [
-        {"text": "tolerancia"},
-        {"value": 20}
-      ]}
-    ]
-  },
-  "13": {
-    "question": "Qué valor podría ser?",
-    "answers" : [
-      {"1": [
-        {"text": "respeto"},
-        {"value": 12}
-      ]},
-      {"2": [
-        {"text": "igualdad"},
-        {"value": 40}
-      ]},
-      {"3": [
-        {"text": "equidad"},
-        {"value": 18}
-      ]},
-      {"4": [
-        {"text": "responsabilidad"},
-        {"value": 20}
-      ]},
-      {"5": [
-        {"text": "tolerancia"},
-        {"value": 20}
-      ]}
-    ]
-  },
-  "14": {
-    "question": "Qué valor podría ser?",
-    "answers" : [
-      {"1": [
-        {"text": "respeto"},
-        {"value": 12}
-      ]},
-      {"2": [
-        {"text": "igualdad"},
-        {"value": 40}
-      ]},
-      {"3": [
-        {"text": "equidad"},
-        {"value": 18}
-      ]},
-      {"4": [
-        {"text": "responsabilidad"},
-        {"value": 20}
-      ]},
-      {"5": [
-        {"text": "tolerancia"},
-        {"value": 20}
-      ]}
-    ]
-  },
-  "15": {
-    "question": "Qué valor podría ser?",
-    "answers" : [
-      {"1": [
-        {"text": "respeto"},
-        {"value": 12}
-      ]},
-      {"2": [
-        {"text": "igualdad"},
-        {"value": 40}
-      ]},
-      {"3": [
-        {"text": "equidad"},
-        {"value": 18}
-      ]},
-      {"4": [
-        {"text": "responsabilidad"},
-        {"value": 20}
-      ]},
-      {"5": [
-        {"text": "tolerancia"},
-        {"value": 20}
-      ]}
-    ]
-  },
-  "16": {
-    "question": "Qué valor podría ser?",
-    "answers" : [
-      {"1": [
-        {"text": "respeto"},
-        {"value": 12}
-      ]},
-      {"2": [
-        {"text": "igualdad"},
-        {"value": 40}
-      ]},
-      {"3": [
-        {"text": "equidad"},
-        {"value": 18}
-      ]},
-      {"4": [
-        {"text": "responsabilidad"},
-        {"value": 20}
-      ]},
-      {"5": [
-        {"text": "tolerancia"},
-        {"value": 20}
-      ]}
-    ]
-  },
-  "17": {
-    "question": "Qué valor podría ser?",
-    "answers" : [
-      {"1": [
-        {"text": "respeto"},
-        {"value": 12}
-      ]},
-      {"2": [
-        {"text": "igualdad"},
-        {"value": 40}
-      ]},
-      {"3": [
-        {"text": "equidad"},
-        {"value": 18}
-      ]},
-      {"4": [
-        {"text": "responsabilidad"},
-        {"value": 20}
-      ]},
-      {"5": [
-        {"text": "tolerancia"},
-        {"value": 20}
-      ]}
-    ]
-  },
-  "18": {
-    "question": "Qué valor podría ser?",
-    "answers" : [
-      {"1": [
-        {"text": "respeto"},
-        {"value": 12}
-      ]},
-      {"2": [
-        {"text": "igualdad"},
-        {"value": 40}
-      ]},
-      {"3": [
-        {"text": "equidad"},
-        {"value": 18}
-      ]},
-      {"4": [
-        {"text": "responsabilidad"},
-        {"value": 20}
-      ]},
-      {"5": [
-        {"text": "tolerancia"},
-        {"value": 20}
-      ]}
-    ]
-  },
-  "19": {
-    "question": "Qué valor podría ser?",
-    "answers" : [
-      {"1": [
-        {"text": "respeto"},
-        {"value": 12}
-      ]},
-      {"2": [
-        {"text": "igualdad"},
-        {"value": 40}
-      ]},
-      {"3": [
-        {"text": "equidad"},
-        {"value": 18}
-      ]},
-      {"4": [
-        {"text": "responsabilidad"},
-        {"value": 20}
-      ]},
-      {"5": [
-        {"text": "tolerancia"},
-        {"value": 20}
+        {"text": "Sinceridad"},
+        {"value": 3}
       ]}
     ]
   }

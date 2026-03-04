@@ -32,23 +32,40 @@ body {
     height: 85%;
 }
 
+#current-question {
+    font-size: large;
+}
+
 #questions-container {
     flex-grow: 2;
     width: 55vw;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 1rem 2rem;
+    background-color: white;
+    border-radius: 1rem;
+    margin-right: 1rem;
+}
+
+#buttons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 #team-data-container {
     flex-grow: 1;
-    height: 45vw;
-    padding: 2rem;
+    height: fit-content;
+    padding: 1rem 2rem;
+    background-color: white;
+    border-radius: 1rem;
 }
 
 #show-questions-container {
     display: none;
     flex-direction: column;
+    background-color: white;
+    border-radius: 1rem;
 }
 
 .answer {
@@ -64,6 +81,7 @@ body {
     font-weight: bolder;
     font-size: large;
     color: darkred;
+    height: 18px;
 }
 
 /* From Uiverse.io by SelfMadeSystem */
@@ -116,3 +134,48 @@ body {
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
 }
+
+#menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* From Uiverse.io by Gautammsharma */
+.comic-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Mouse Memoirs", sans-serif;
+    color: #fff;
+    background-color: #ff5252;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: fit-content;
+    margin: 0.5rem;
+}
+
+.comic-button:hover {
+    background-color: #fff;
+    color: #ff5252;
+    border: 2px solid #ff5252;
+    box-shadow: 5px 5px 0px #ff5252;
+}
+
+.comic-button:active {
+    background-color: #fcf414;
+    box-shadow: none;
+    transform: translateY(4px);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+

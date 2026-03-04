@@ -180,6 +180,7 @@ body {
     margin-left: 2vw;
     margin-right: 2vw;
     display: none;
+    font-size: large;
 }
 
 .score {
@@ -232,3 +233,5 @@ body {
     font-size: 30vw;
     color: darkred;
 }
+
+

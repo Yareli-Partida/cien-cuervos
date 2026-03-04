@@ -7,6 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="main-container">
@@ -15,18 +18,22 @@
         </div>
         <div id="contents-container">
             <div id="questions-container">
-                <h3 class="menu-item">Menú</h3>
-                <button id="start-game-1" class="menu-item">Empezar juego #1</button>
-                <button id="start-game-2" class="menu-item">Empezar juego #2</button>
-                <button id="go-home-page" class="menu-item">Volver</button>
+                <div id="menu-container">
+                    <h2 class="menu-item">Menú</h2>
+                    <button id="start-game-1" class="menu-item comic-button">Empezar juego #1</button>
+                    <button id="start-game-2" class="menu-item comic-button">Empezar juego #2</button>
+                    <button id="go-home-page" class="menu-item comic-button">Volver</button>
+                </div>
                 <div id="show-questions-container">
                     <p id="title-question"></p>
                     <p id="current-question"></p>
                     <div id="show-answers-container">
                         <p>Respuestas:</p>
                     </div>
-                    <button id="next-question">Siguiente pregunta</button>
-                    <button id="return-menu">Menú</button>
+                    <div id="buttons-container">
+                        <button id="next-question" class="comic-button">Siguiente pregunta</button>
+                        <button id="return-menu" class="comic-button">Menú</button>
+                    </div>
                 </div>
             </div>
             <div id="team-data-container">
@@ -45,8 +52,9 @@
                 </div>
                 <hr>
                 <div id="strikes">
-                    <p>Strikes de la ronda:</p><p id="current-strikes"></p>
-                    <button id="add-strike">Agregar strike</button>
+                    <p>Strikes de la ronda:</p>
+                    <p id="current-strikes"></p>
+                    <button id="add-strike" class="comic-button">Agregar strike</button>
                 </div>
             </div>
         </div>
