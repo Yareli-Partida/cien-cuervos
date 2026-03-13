@@ -8,6 +8,8 @@ let currentQuestionIdx;
 
 window.onload = getQuestions();
 
+// calls the questions api upon loading and gets ALL questions and answers
+// no matter if game 1 or 2 is being played and stores them in a variable questions
 async function getQuestions() {
 	try {
 		const questionsApi = "http://localhost:8080/api/get-all-questions";
@@ -25,6 +27,8 @@ async function getQuestions() {
 	}
 }
 
+// Gets a hold of all the divs with answer class and deletes them
+// also removes the inner text of the current question
 async function clearScreen() {
 	return new Promise((resolve) => {
 		let allCurrentAnswers = document.getElementsByClassName("answer");
@@ -40,11 +44,7 @@ async function clearScreen() {
 }
 
 function showCurrentQuestion(idx) {
-	let allCurrentAnswers = document.getElementsByClassName("answer");
-
-	while (allCurrentAnswers.length > 0) {
-		allCurrentAnswers[0].remove();
-	}
+	clearScreen();
 
 	currentQuestionIdx = idx;
 	let questionTitle = document.getElementById("current-question");
@@ -53,6 +53,7 @@ function showCurrentQuestion(idx) {
 	popUpSound.play();
 }
 
+// creates the answer divs whose text is not displayed by default
 function createAnswerElements(answers) {
 	let answersDiv = document.getElementById("answers-container");
 	for (let i = 0; i < answers.length; i++) {
@@ -73,6 +74,8 @@ function createAnswerElements(answers) {
 	}
 }
 
+// this toggles the visibility of the p element inside a given answer div
+// based on whether it has a visible class or not assigned
 function flipAnswer(idx) {
 	let answerElementName = "answer-" + String(idx);
 	let scoreElementName = "value-" + String(idx);
@@ -103,6 +106,7 @@ function setTeam2Score(score) {
 	document.getElementById("team-2-score").innerText = String (score);
 }
 
+// no logic here is used to determine the winning team, it just listed to the admin
 async function showWinner(winner) {
 	await clearScreen();
 
@@ -128,16 +132,17 @@ function sleep(ms) {
 	return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+// shows strikes modal for 2 secs before hiding again
 function showStrikeModal(amount) {
 	for (let i = 0; i < amount; i++) {
 		document.getElementById("current-strikes").innerText += "X"
 	}
 
 	errorSound.play();
-	strikesModal.style.display = "block";
+	strikesModal.style.display = "flex";
 
 	sleep(2000).then(() => {
-		strikesModal.style.display = "block";
+		strikesModal.style.display = "none";
 		document.getElementById("current-strikes").innerText = "";
 	});
 }

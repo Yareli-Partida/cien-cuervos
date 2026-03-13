@@ -1,7 +1,7 @@
 import {setTeam2Score, setTeam1Score, setRoundScore, showCurrentQuestion, flipAnswer, showWinner, showStrikeModal} from "./gameroom.js";
 
 
-let id = 1; // fix this later
+let id = 1;
 let stompClient = null;
 window.onload = connect();
 
@@ -10,7 +10,7 @@ function connect() {
 	stompClient = Stomp.over(socket);
 	stompClient.connect({}, function(frame) {
 		console.log('Connected: ' + frame);
-		stompClient.subscribe('/topic/messages/' + id, function(messageOutput) {
+		stompClient.subscribe('/topic/messages/' + id, async function (messageOutput) {
 			let body = JSON.parse(messageOutput.body);
 
 			if (body.hasOwnProperty("message")) {

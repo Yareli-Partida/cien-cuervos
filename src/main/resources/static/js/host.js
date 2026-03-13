@@ -13,6 +13,9 @@ let currentQuestionIndex = 0;
 
 window.onload = getQuestions();
 
+// calls the questions api upon loading and gets ALL questions and answers
+// no matter if game 1 or 2 is being played and stores them in a variable questions
+// cause why multiple request if one request good
 async function getQuestions() {
 	try {
 		const questionsApi = "http://localhost:8080/api/get-all-questions";
@@ -44,6 +47,10 @@ function showMenuItems() {
 	}
 }
 
+// since all questions and answers are retrieved on loading, but each game has only 5 questions
+// and of course we need both games to number their questions 1 thru 5
+// even if the question is really the 7th or 8th
+// here it calculates its index on a 1-5 scale
 function updateQuestionData() {
 	if (currentQuestionIndex < 5) {
 		document.getElementById("title-question").innerText = "Pregunta #" + String(currentQuestionIndex + 1) + ":";
@@ -53,6 +60,8 @@ function updateQuestionData() {
 	document.getElementById("current-question").innerText = questions[currentQuestionIndex]["question"];
 }
 
+// creates each answer class div, along with its child elements and its event listeners
+// and assigns each a unique id
 function createAnswersElements() {
 	let answersDiv = document.getElementById("show-answers-container");
 	let answersArray = questions[currentQuestionIndex]["answers"];
@@ -161,6 +170,7 @@ function createAnswersElements() {
 	}
 }
 
+// the divs cant be reused bc of the event listeners duplicating, so they get deleted
 function removeAnswers() {
 	let allAnswerDivs = document.getElementsByClassName("answer");
 
@@ -219,6 +229,8 @@ nextQuestion.addEventListener("click", async e => {
 		createAnswersElements();
 		finalRoundPoints.innerText = "0";
 
+		// when the questions is the last of its game, it changes the inner text of the next
+		// button question to better explain its functionality to the admin
 		if (currentQuestionIndex === 4 || currentQuestionIndex === 9) {
 			nextQuestion.innerText = "Terminar juego";
 		}
@@ -233,11 +245,11 @@ addStrikeButton.addEventListener("click", e => {
 		strikeCounter++;
 	}
 
+	sendMessage({"strike": strikeCounter.toString()});
+
 	if (strikeCounter === 3) {
 		window.alert("¡3 Strikes!")
 	}
-
-	sendMessage({"strike": strikeCounter.toString()});
 });
 
 winnersReturnToMenuButton.addEventListener("click", e => {
@@ -252,7 +264,10 @@ winnersReturnToMenuButton.addEventListener("click", e => {
 	showMenuItems();
 });
 
-
+// this modal is the one that gets triggered upon clicking the next question button
+// it asks which team to assign the round's points to
+// and also triggers the winners modal since the next question button on the
+// last round also acts as a "finish game" button
 async function showModalAsync() {
 	return new Promise((resolve) => {
 		modal.style.display = "block";
